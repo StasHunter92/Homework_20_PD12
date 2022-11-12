@@ -1,0 +1,39 @@
+GET 127.0.0.1:5000/movies/
+Accept: application/json
+
+###
+
+GET 127.0.0.1:5000/movies/20
+Accept: application/json
+
+###
+
+POST 127.0.0.1:5000/movies/
+Content-Type: application/json
+
+{
+    "title": "Test title",
+    "description": "Test description",
+    "year": 2022,
+    "rating": 10
+}
+
+###
+
+PUT 127.0.0.1:5000/movies/21
+Content-Type: application/json
+
+{
+    "title": "Put title",
+    "description": "Put description",
+    "trailer": "Put trailer",
+    "year": 2023,
+    "rating": 11,
+    "genre_id": 7,
+    "director_id": 8
+}
+
+###
+
+DELETE 127.0.0.1:5000/movies/21
+Content-Type: application/json
