@@ -4,7 +4,7 @@ from app.database.setup_db import db
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Create models for database
+# Create model for database
 class Director(db.Model):
     """Director model"""
     __tablename__ = "director"
@@ -14,7 +14,7 @@ class Director(db.Model):
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Create schemas for models
+# Create schema for model
 class DirectorSchema(Schema):
     """Schema for Director"""
     id = fields.Int(dump_only=True)

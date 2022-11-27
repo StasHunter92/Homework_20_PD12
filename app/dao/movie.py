@@ -9,16 +9,14 @@ class MovieDAO:
     """
     def __init__(self, session):
         """
-        Initialize DAO with session
-
+        Initialize DAO with session \n
         :param session: Database session
         """
         self.session = session
 
     def get_all(self, data: dict) -> list[Movie] | list:
         """
-        Get all movies from database
-
+        Get all movies from database \n
         :param data: Filters for search movies
         :return: List of movie instances
         """
@@ -35,8 +33,7 @@ class MovieDAO:
 
     def get_one(self, movie_id: int) -> Movie:
         """
-        Get one movie from database by id
-
+        Get one movie from database by id \n
         :param movie_id: ID of movie
         :return: Movie instance
         """
@@ -44,8 +41,7 @@ class MovieDAO:
 
     def create(self, data: dict) -> str:
         """
-        Create a new movie
-
+        Create a new movie \n
         :param data: Dictionary with new information
         :return: Location of new movie
         """
@@ -59,21 +55,18 @@ class MovieDAO:
         self.session.commit()
         return location
 
-    def update(self, movie: Movie) -> Movie:
+    def update(self, movie: Movie) -> None:
         """
-        Update movie information
-
+        Update movie information \n
         :param movie: Movie instance
         :return: Movie instance
         """
         self.session.add(movie)
         self.session.commit()
-        return movie
 
     def delete(self, movie: Movie) -> None:
         """
-        Delete movie from database
-
+        Delete movie from database \n
         :param movie: Movie instance
         :return: Nothing
         """

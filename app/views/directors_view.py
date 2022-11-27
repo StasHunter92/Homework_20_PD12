@@ -17,8 +17,7 @@ class DirectorsView(Resource):
     @staticmethod
     def get():
         """
-        Get all directors
-
+        Get all directors \n
         :return: JSON response with status code 200
         """
         all_directors: list = director_service.get_all()
@@ -33,8 +32,7 @@ class DirectorView(Resource):
     @staticmethod
     def get(director_id: int):
         """
-        Get one director by id
-
+        Get one director by id \n
         :param director_id: ID of director
         :return: JSON response with status code 200 or 404 if director is not found
         """

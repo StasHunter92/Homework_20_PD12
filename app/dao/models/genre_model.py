@@ -4,7 +4,7 @@ from app.database.setup_db import db
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Create models for database
+# Create model for database
 class Genre(db.Model):
     """Genre model"""
     __tablename__ = "genre"
@@ -14,7 +14,7 @@ class Genre(db.Model):
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Create schemas for models
+# Create schema for models
 class GenreSchema(Schema):
     """Schema for Genre"""
     id = fields.Int(dump_only=True)

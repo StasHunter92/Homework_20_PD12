@@ -17,8 +17,7 @@ class GenresView(Resource):
     @staticmethod
     def get():
         """
-        Get all genres
-
+        Get all genres \n
         :return: JSON response with status code 200
         """
         all_genres: list = genre_service.get_all()
@@ -33,8 +32,7 @@ class GenreView(Resource):
     @staticmethod
     def get(genre_id: int):
         """
-        Get one genre by id
-
+        Get one genre by id \n
         :param genre_id: ID of genre
         :return: JSON response with status code 200 or 404 if genre is not found
         """

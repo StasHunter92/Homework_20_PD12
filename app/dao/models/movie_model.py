@@ -5,7 +5,7 @@ from app.database.setup_db import db
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Create Model for database
+# Create model for database
 class Movie(db.Model):
     """Movie model"""
     __tablename__ = "movie"
@@ -24,7 +24,7 @@ class Movie(db.Model):
 
 
 # ----------------------------------------------------------------------------------------------------------------------
-# Create Schema for models
+# Create schema for model
 class MovieSchema(Schema):
     """Schema for Movie"""
     id = fields.Int(dump_only=True)

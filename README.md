@@ -2,42 +2,23 @@
 
 ______________________________________
 
-### **Урок 18. Архитектура**
+### **Урок 20. Автоматичеcкое тестирование приложений на Flask**
 
 ______________________________________
-Для запуска программы используйте `main.py`
+**За основу взят репозиторий с домашней работой №18**
 
 Что сделано:
 
-:white_check_mark: созданы модели Movie, Director и Genre
+:white_check_mark: создана фикстура с моком для MovieDAO
 
-:white_check_mark: созданы схемы Marshmallow для всех моделей
+:white_check_mark: создан файл с тестами для MovieService 
 
-:white_check_mark: созданы **DAO** модели Movie, Director и Genre
+:white_check_mark: создана фикстура с моком для DirectorDAO
 
-:white_check_mark: созданы **Service** модели Movie, Director и Genre
+:white_check_mark: создан файл с тестами для DirectorService 
 
-:white_check_mark: созданы неймспейсы **RESTX** для всех маршрутов
+:white_check_mark: создана фикстура с моком для GenreDAO
 
-:white_check_mark: созданы индивидуальные **CBV** для Movie, Director и Genre
+:white_check_mark: создан файл с тестами для GenreService
 
-:white_check_mark: корректно работает выдача всех фильмов по маршруту /movies/ с возможностью фильтрации результата 
-через аргументы **director_id**, **genre_id** и **year** или конкретного фильма по маршруту /movies/id
-
-:white_check_mark: корректно работает выдача всех режиссеров по маршруту /directors/
-или конкретного режиссера по маршруту /directors/id
-
-:white_check_mark: корректно работает выдача всех жанров по маршруту /genres/
-или списка фильмов по жанру по маршруту /genres/id
-
-:white_check_mark: корректно работает **POST** добавление фильма по маршруту /movies/ с заголовком **Locations**
-
-:white_check_mark: корректно работает **PUT** обновление фильма по маршруту /movies/id
-
-:white_check_mark: корректно работает **DELETE** удаление фильма по маршруту /movies/id
-
-:white_check_mark: Обработчики ошибок **404** и **500** и обработчики внутри кода
-_____________________________________
-**Дополнительно реализовано:**
-
-:white_check_mark: Написана проверка работоспособности через **HTTP Request** в папке `app\api`
+:white_check_mark: тесты запускаются и успешно проходятся по команде `pytest`

@@ -19,8 +19,7 @@ class MoviesView(Resource):
     @staticmethod
     def get():
         """
-        Get all movies
-
+        Get all movies \n
         :return: JSON response with status code 200
         """
         data: dict = {
@@ -36,8 +35,7 @@ class MoviesView(Resource):
     @staticmethod
     def post():
         """
-        Create a new movie
-
+        Create a new movie \n
         :return: JSON response with status code 201 or 500 request body is wrong
         """
         data = request.json
@@ -59,8 +57,7 @@ class MovieView(Resource):
     @staticmethod
     def get(movie_id: int):
         """
-        Get one movie by id
-
+        Get one movie by id \n
         :param movie_id: ID of movie
         :return: JSON response with status code 200 or 404 if movie is not found
         """
@@ -74,26 +71,25 @@ class MovieView(Resource):
     @staticmethod
     def put(movie_id: int):
         """
-        Update movie information by id
-
+        Update movie information by id \n
         :param movie_id: ID of movie
         :return: No content response 204 or 404 if movie is not found
         """
         data = request.json
         data['id'] = movie_id
-
-        movie: object = movie_service.update(data)
+        movie: object = movie_service.get_one(movie_id)
 
         if not movie:
             return "Invalid id to update", 404
+
+        movie_service.update(data)
 
         return "", 204
 
     @staticmethod
     def delete(movie_id: int):
         """
-        Delete movie by id
-
+        Delete movie by id \n
         :param movie_id: ID of movie
         :return: No content response 204 or 404 if movie is not found
         """

@@ -9,24 +9,21 @@ class DirectorDAO:
     """
     def __init__(self, session):
         """
-        Initialize DAO with session
-
+        Initialize DAO with session \n
         :param session: Database session
         """
         self.session = session
 
     def get_all(self) -> list[Director] | list:
         """
-        Get all directors from database
-
+        Get all directors from database \n
         :return: List of director instances
         """
         return self.session.query(Director).all()
 
     def get_one(self, director_id: int) -> Director:
         """
-        Get one director from database by id
-
+        Get one director from database by id \n
         :param director_id: ID of director
         :return: Director instance
         """

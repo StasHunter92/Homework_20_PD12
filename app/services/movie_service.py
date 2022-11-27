@@ -6,15 +6,14 @@ class MovieService:
     """
     def __init__(self, dao):
         """
-        Initialize Service with DAO object
+        Initialize Service with DAO object \n
         :param dao: MovieDAO object
         """
         self.dao = dao
 
     def get_all(self, data: dict) -> list:
         """
-        Get all movies from database
-
+        Get all movies from database \n
         :param data: Filters for search movies
         :return: List of movie instances
         """
@@ -22,8 +21,7 @@ class MovieService:
 
     def get_one(self, movie_id: int) -> object:
         """
-        Get one movie from database by id
-
+        Get one movie from database by id \n
         :param movie_id: ID of movie
         :return: Movie instance
         """
@@ -31,16 +29,15 @@ class MovieService:
 
     def create(self, data: dict) -> str:
         """
-        Create a new movie
+        Create a new movie \n
         :param data: Dictionary with new information
         :return: Location of new movie
         """
         return self.dao.create(data)
 
-    def update(self, data: dict) -> object:
+    def update(self, data: dict) -> None:
         """
-        Update movie information
-
+        Update movie information \n
         :param data: Dictionary with update information
         :return: Movie instance
         """
@@ -55,12 +52,11 @@ class MovieService:
         movie.genre_id = data.get("genre_id")
         movie.director_id = data.get("director_id")
 
-        return self.dao.update(movie)
+        self.dao.update(movie)
 
     def delete(self, movie_id: int) -> None:
         """
-        Delete movie from database
-
+        Delete movie from database \n
         :param movie_id: ID of movie
         :return: Nothing
         """

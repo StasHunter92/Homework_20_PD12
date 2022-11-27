@@ -6,23 +6,21 @@ class GenreService:
     """
     def __init__(self, dao):
         """
-        Initialize Service with DAO object
+        Initialize Service with DAO object \n
         :param dao: GenreDAO object
         """
         self.dao = dao
 
     def get_all(self) -> list:
         """
-        Get all genres from database
-
+        Get all genres from database \n
         :return: List of genre instances
         """
         return self.dao.get_all()
 
     def get_one(self, genre_id: int) -> object:
         """
-        Get one genre from database by id
-
+        Get one genre from database by id \n
         :param genre_id: ID of genre
         :return: Genre instance
         """
